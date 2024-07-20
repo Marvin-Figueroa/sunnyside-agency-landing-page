@@ -314,3 +314,46 @@ body {
 .gallery__image {
   width: 100%;
 }
+
+/* ------------------- Footer Section -------------------- */
+
+.footer {
+  grid-area: footer;
+  background-color: #61a699;
+  text-align: center;
+  padding: 4rem 3rem;
+  color: var(--dark-desaturated-cyan);
+}
+
+.footer__title {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 3rem;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+  font-size: 1.6rem;
+}
+
+.footer__nav__link {
+  &:link,
+  &:visited {
+    color: var(--dark-desaturated-cyan);
+    font-weight: normal;
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  svg {
+    cursor: pointer;
+  }
+}
