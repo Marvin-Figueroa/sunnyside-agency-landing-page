@@ -252,3 +252,53 @@ body {
 .service__description {
   line-height: 1.6;
 }
+
+/* ------------------- Testimonials Section -------------------- */
+
+.section-testimonials {
+  grid-area: testimonials;
+  text-align: center;
+  padding: 6rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.section-testimonials__title {
+  font-family: "Fraunces", serif;
+  color: var(--grayish-blue);
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 5px;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.testimonial__image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.testimonial__text {
+  line-height: 1.6;
+  font-weight: bold;
+  color: var(--very-dark-grayish-blue);
+}
+
+.testimonial__author {
+  font-family: "Fraunces", serif;
+  color: var(--dark-desaturated-blue);
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial__job-title {
+  color: var(--grayish-blue);
+  font-size: 1.4rem;
+}
