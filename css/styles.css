@@ -1,0 +1,147 @@
+:root {
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark-desaturated-cyan: hsl(167, 40%, 24%);
+  --dark-blue: hsl(198, 62%, 26%);
+  --dark-moderate-cyan: hsl(168, 34%, 41%);
+  --dark-desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* ------------------ Reset -------------- */
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--white);
+  font-size: 1.8rem;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* -------------------- Utility Classes --------------------- */
+
+.log {
+  border: 2px solid crimson;
+}
+
+/* ------------------- Header Section ----------------------- */
+
+.header {
+  background-image: url("/images/mobile/image-header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.nav__logo a {
+  color: var(--white);
+  font-weight: 900;
+  font-size: 2.4rem;
+}
+
+.nav__menu-icon {
+  cursor: pointer;
+  width: 2rem;
+}
+
+.hero-section {
+  text-align: center;
+}
+
+.hero-section__title {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  font-size: 4rem;
+  letter-spacing: 8px;
+  margin-bottom: 5rem;
+}
+
+.nav__list {
+  background-color: var(--white);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  padding: 6rem 0;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    top: -25px;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background-color: var(--white);
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.nav__link {
+  &:link,
+  &:visited {
+    color: var(--dark-grayish-blue);
+    font-weight: bold;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--yellow);
+    text-transform: uppercase;
+    color: #000;
+    padding: 1.8rem 3rem;
+    border-radius: 50px;
+    font-family: "Fraunces", serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+  }
+}
