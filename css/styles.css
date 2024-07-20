@@ -214,3 +214,41 @@ body {
 .feature:nth-child(2) .feature__link::before {
   background-color: rgba(255, 0, 0, 0.15);
 }
+
+/* ------------------- Services Section -------------------- */
+
+.section-services {
+  grid-area: services;
+}
+
+.service {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: end;
+  padding: 6rem 3rem;
+  text-align: center;
+}
+
+.service--design {
+  background-image: url("../images/mobile/image-graphic-design.jpg");
+  color: var(--dark-desaturated-cyan);
+}
+
+.service--photography {
+  background-image: url("../images/mobile/image-photography.jpg");
+  color: var(--dark-blue);
+}
+
+.service__title {
+  text-transform: capitalize;
+  font-family: "Fraunces", serif;
+}
+
+.service__description {
+  line-height: 1.6;
+}
