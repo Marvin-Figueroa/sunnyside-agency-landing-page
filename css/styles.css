@@ -40,6 +40,11 @@ ul {
   list-style-type: none;
 }
 
+body {
+  display: grid;
+  grid-template-areas: "header" "features" "features" "services" "services" "testimonials" "gallery" "footer";
+}
+
 /* -------------------- Utility Classes --------------------- */
 
 .log {
@@ -57,6 +62,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  grid-area: header;
 }
 
 .nav {
@@ -144,4 +150,67 @@ ul {
     border: none;
     outline: none;
   }
+}
+
+/* ------------------- Features Section -------------------- */
+
+.section-features {
+  grid-area: features;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+.feature__content {
+  text-align: center;
+  padding: 6rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.feature__title {
+  font-size: 3rem;
+  font-family: "Fraunces", serif;
+  color: var(--dark-desaturated-blue);
+}
+
+.feature__description {
+  font-family: "Barlow", sans-serif;
+  color: var(--dark-grayish-blue);
+  line-height: 1.6;
+}
+
+.feature__link {
+  position: relative;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  color: var(--dark-desaturated-blue);
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 114%;
+    height: 10px;
+    border-radius: 50px;
+    left: -7%;
+    bottom: -4px;
+    z-index: -1;
+  }
+}
+
+.feature:nth-child(1) .feature__link::before {
+  background-color: rgba(255, 255, 0, 0.25);
+}
+.feature:nth-child(2) .feature__link::before {
+  background-color: rgba(255, 0, 0, 0.15);
 }
