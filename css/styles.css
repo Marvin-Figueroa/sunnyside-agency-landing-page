@@ -302,3 +302,15 @@ body {
   color: var(--grayish-blue);
   font-size: 1.4rem;
 }
+
+/* ------------------- Gallery Section -------------------- */
+
+.section-gallery {
+  grid-area: gallery;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery__image {
+  width: 100%;
+}
