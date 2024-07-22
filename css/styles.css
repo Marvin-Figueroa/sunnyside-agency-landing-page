@@ -235,6 +235,12 @@ body {
   text-align: center;
 }
 
+.service__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
 .service--design {
   background-image: url("../images/mobile/image-graphic-design.jpg");
   color: var(--dark-desaturated-cyan);
@@ -536,15 +542,15 @@ body {
 
   .service {
     font-size: 1.5rem;
-    height: 60vh;
-    padding: 3rem;
+    height: 50vh;
+    padding: 2rem 4rem;
   }
 
   .service__content {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    height: 40%;
+    height: 35%;
   }
 
   .service--design {
