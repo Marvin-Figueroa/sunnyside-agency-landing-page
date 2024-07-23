@@ -13,7 +13,7 @@
   --section-padding: 4rem;
 }
 
-/* ------------------ Reset -------------- */
+/* ------------------ Basic Styles -------------- */
 *,
 *::after,
 *::before {
@@ -217,7 +217,7 @@ ul {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  height: 130vw;
+  height: 130vw; /* To increase the height based on the width of the viewport, so that the bg-image doesnt grow too much and overlaps the text content */
   min-height: 55rem;
   display: flex;
   flex-direction: column;
@@ -324,7 +324,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  background-color: #61a699;
+  background-color: var(--dark-moderate-cyan);
   text-align: center;
   padding: var(--section-padding);
   color: var(--dark-desaturated-cyan);
@@ -360,7 +360,9 @@ ul {
   fill: var(--dark-desaturated-cyan);
 }
 
+/* =========================================================== */
 /* ===================== Media Queries ======================= */
+/* =========================================================== */
 
 @media (min-width: 480px) {
   :root {
@@ -379,16 +381,11 @@ ul {
     font-size: 55%;
   }
 
-  .header {
-    height: 70vh;
-  }
-
   /* ------------------ Header Section -------------------- */
   .header {
     background-image: url("/images/desktop/image-header.jpg");
     justify-content: start;
-    gap: 8rem;
-    min-height: 60vh;
+    gap: 20vh;
   }
 
   .nav {
@@ -487,16 +484,6 @@ ul {
     .feature__content {
       grid-column: 2 / 3;
     }
-
-    .feature__link:hover::before {
-      background-color: rgba(255, 255, 0, 0.7);
-    }
-  }
-
-  .feature:nth-child(2) {
-    .feature__link:hover::before {
-      background-color: rgba(255, 0, 0, 0.5);
-    }
   }
 
   /* ------------------- Services Section -------------------- */
@@ -557,13 +544,12 @@ ul {
     font-size: 65%;
   }
 
-  .header {
-    gap: 1rem;
-    height: 70vh;
+  .service {
+    min-height: 50rem;
   }
 
-  .service {
-    height: 50rem;
+  .footer {
+    padding: calc(var(--section-padding) - 4rem);
   }
 }
 
@@ -574,29 +560,24 @@ ul {
     --section-padding: 8rem;
   }
 
-  .hero-section__title {
-    font-size: 3.5rem;
-  }
-
-  .header {
-    min-height: 100vh;
-    gap: 14rem;
-  }
-
   .nav__logo:hover {
     color: var(--soft-red);
   }
 
-  .service {
-    height: 60rem;
+  .feature:nth-child(2) {
+    .feature__link:hover::before {
+      background-color: rgba(255, 0, 0, 0.5);
+    }
+  }
+
+  .feature:nth-child(1) {
+    .feature__link:hover::before {
+      background-color: rgba(255, 255, 0, 0.7);
+    }
   }
 
   .service__content {
     height: 40%;
-  }
-
-  .testimonial__text {
-    font-size: 1.6rem;
   }
 
   .footer__nav__link {
@@ -615,13 +596,12 @@ ul {
 
 @media (min-width: 1140px) {
   html {
-    font-size: 75%;
+    font-size: 70%;
   }
 
   .header {
-    gap: 5rem;
+    gap: 12vh;
   }
-
   .nav__link {
     &:link,
     &:visited {
